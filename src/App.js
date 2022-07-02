@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      name: {firstName:'vansh',lastName:'jain'}
+      name: { firstName: 'vansh', lastName: 'jain' }
       , adress: 'nanak nagar'
       , roll: '662'
     }
@@ -19,8 +19,14 @@ class App extends Component {
             HI {this.state.name.firstName} {this.state.name.lastName},Work at {this.state.adress}
           </p>
           <button onClick={() => {
-            this.setState({name:{firstName:'rohit',lastName:'gupta'},adress:'ZTM'})
-            console.log(this.state)
+            this.setState(() => {
+              return {
+                name: { firstName: 'rohit', lastName: 'gupta' }
+              }
+            },
+              () => {
+                console.log(this.state) //This only runs when state is fully updated
+              })
           }}>
             Change name
           </button>
