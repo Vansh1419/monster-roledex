@@ -7,7 +7,7 @@ class App extends Component {
     this.state = {
       name: {firstName:'vansh',lastName:'jain'}
       , adress: 'nanak nagar'
-      , roll: '66'
+      , roll: '662'
     }
   }
   render() {
