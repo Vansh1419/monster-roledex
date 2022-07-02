@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      name: 'vansh'
+      name: {firstName:'vansh',lastName:'jain'}
       , adress: 'nanak nagar'
       , roll: '66'
     }
@@ -16,10 +16,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            HI {this.state.name},Work at {this.state.adress}
+            HI {this.state.name.firstName} {this.state.name.lastName},Work at {this.state.adress}
           </p>
           <button onClick={() => {
-            this.setState({name:'sambhav',adress:'ZTM'})
+            this.setState({name:{firstName:'rohit',lastName:'gupta'},adress:'ZTM'})
+            console.log(this.state)
           }}>
             Change name
           </button>
